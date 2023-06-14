@@ -1,0 +1,31 @@
+To implement an Oracle database schema for the proposed Car Sales System application, I can create the following tables with appropriate columns, data types, and constraints. I will provide a sample schema based on the information provided:
+
+Table: Manufacturers
+Columns:
+
+manufacturer_id (Primary Key, Number): Unique identifier for each manufacturer
+manufacturer_name (Varchar2): Name of the manufacturer
+Table: Vehicles
+Columns:
+
+vehicle_id (Primary Key, Number): Unique identifier for each vehicle
+manufacturer_id (Foreign Key, Number): References the manufacturer_id from the Manufacturers table
+model (Varchar2): Model of the vehicle
+date_of_purchase (Date): Date of purchase of the vehicle
+kilometers (Number): Kilometers ran in case of used vehicles
+price (Number): Price of the vehicle
+Table: Customers
+Columns:
+
+customer_id (Primary Key, Number): Unique identifier for each customer
+customer_name (Varchar2): Name of the customer
+contact_number (Varchar2): Contact number of the customer
+address (Varchar2): Address of the customer
+Table: Sales
+Columns:
+
+sale_id (Primary Key, Number): Unique identifier for each sale
+vehicle_id (Foreign Key, Number): References the vehicle_id from the Vehicles table
+customer_id (Foreign Key, Number): References the customer_id from the Customers table
+sale_date (Date): Date of the sale
+sale_price (Number): Sale price of the vehicle
